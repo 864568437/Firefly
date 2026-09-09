@@ -402,8 +402,9 @@ const coverPositionClass =
   }
 
   #post-list-container.grid-mode :global(.post-card-title) {
-    font-size: 1.35rem !important;
-    line-height: 1.75rem !important;
+    color: color-mix(in oklab, var(--primary) 70%, var(--color-black, #000));
+    font-size: 1.25rem !important;
+    line-height: 1.5rem !important;
     margin-bottom: 0.5rem !important;
   }
 
@@ -413,7 +414,29 @@ const coverPositionClass =
 
   #post-list-container.grid-mode :global(.post-meta) {
     margin-bottom: 0.5rem !important;
-    gap: 0.5rem !important;
+    gap: 0.375rem !important;
+    color: color-mix(in oklab, var(--primary) 70%, var(--color-black, #000));
+  }
+
+  #post-list-container.grid-mode :global(.card-header-meta > div) {
+    min-height: 2rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    background: color-mix(in oklab, var(--primary) 12%, transparent);
+  }
+
+  #post-list-container.grid-mode :global(.card-header-meta .meta-icon) {
+    background: transparent !important;
+  }
+
+  #post-list-container.grid-mode :global(.card-header-meta .meta-divider) {
+    display: none;
+  }
+
+  #post-list-container.grid-mode :global(.card-header-meta .post-meta-tags) {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    background: color-mix(in oklab, var(--primary) 12%, transparent);
   }
 
   #post-list-container.grid-mode :global(.post-meta .text-xl) {
@@ -462,6 +485,16 @@ const coverPositionClass =
   #post-list-container.grid-mode :global(.post-meta .pinned-btn .text-sm) {
     font-size: 0.875rem !important;
     line-height: 1.25rem !important;
+  }
+
+  #post-list-container.grid-mode :global(.description) {
+    font-size: 0.875rem;
+    line-height: 1.35rem;
+  }
+
+  #post-list-container.grid-mode :global(.stats) {
+    padding-top: 0.75rem;
+    color: color-mix(in oklab, var(--color-black, #000) 50%, transparent);
   }
 
 </style>
